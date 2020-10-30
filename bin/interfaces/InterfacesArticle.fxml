@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="429.0" prefWidth="588.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaces.ControllerArticle">
+   <children>
+      <MenuBar fx:id="myMenuBar" prefHeight="32.0" prefWidth="588.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Fichier">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#closeclick" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Structure">
+            <items>
+              <MenuItem id="fa" fx:id="fa" mnemonicParsing="false" onAction="#familleclick" text="Famille" />
+                  <MenuItem mnemonicParsing="false" onAction="#articleclick" text="Article" />
+                  <MenuItem mnemonicParsing="false" onAction="#PaletteClick" text="Palette" />
+                  <MenuItem mnemonicParsing="false" onAction="#MesureClick" text="Mesure" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Traitement">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#rapportclick" text="Rapports" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text layoutX="35.0" layoutY="57.0" strokeMiterLimit="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="La Liste des articles" textAlignment="CENTER" wrappingWidth="316.13671875" />
+      <Button fx:id="ajouterArticle" layoutX="388.0" layoutY="40.0" mnemonicParsing="false" onAction="#ajouterArticle_click" prefHeight="25.0" prefWidth="150.0" text="Ajouter Article " />
+      <TableView fx:id="table" layoutX="29.0" layoutY="102.0" prefHeight="200.0" prefWidth="544.0">
+        <columns>
+          <TableColumn fx:id="code" prefWidth="122.0" text="Code" />
+          <TableColumn fx:id="designations" prefWidth="139.0" text="Désignations" />
+            <TableColumn fx:id="famille" prefWidth="118.0" text="Famille" />
+            <TableColumn fx:id="Actions" prefWidth="164.0" text="Actions" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
