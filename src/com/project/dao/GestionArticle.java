@@ -38,7 +38,7 @@ public class GestionArticle  extends DataBaseConnection{
 	
 	 public ArrayList<Article > GetArticletList(){
 	    	try {
-	    		//System.out.println(con.toString());
+	    		
 	        	String sql = "SELECT * FROM application.dbo.article";
 	            st = con.createStatement();
 	        	rs = st.executeQuery(sql);
